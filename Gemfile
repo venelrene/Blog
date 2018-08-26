@@ -52,6 +52,9 @@ group :development do
   gem 'guard'
   # Automatically reload your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', require: false
+	# helps reduce the number of queries an application makes
+  gem 'bullet'
+
 end
 
 group :test do

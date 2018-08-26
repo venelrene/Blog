@@ -27,6 +27,15 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.after_initialize do
+	  # Enable bullet in your application
+	  Bullet.enable = true
+		# Notify the developer using a simple javascript alert
+	  # Bullet.alert = true
+		# Notification to your Rails log about your bad queries
+	  Bullet.rails_logger = true
+  end
+  
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
