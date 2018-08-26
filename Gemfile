@@ -38,9 +38,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'simple_form'
 
-# Provides a better error page for Rails and other Rack apps
-gem 'better_errors'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -59,6 +56,8 @@ group :development do
   gem 'guard-livereload', '~> 2.5', require: false
 	# helps reduce the number of queries an application makes
   gem 'bullet'
+  # Provides a better error page for Rails and other Rack apps
+  gem 'better_errors'
 
 end
 
