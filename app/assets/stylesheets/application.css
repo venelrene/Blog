@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap.min.css";
+@import "default.css";
+@import "materialdesignicons.min.css";
+@import "metismenu.min.css";
+@import "owl-carousel.css";
+@import "posts.scss";
+@import "style.css";
