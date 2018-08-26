@@ -1,1 +1,10 @@
 <h1> This is Post </h1>
+
+<section class="section">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <p> <%= link_to post.title, post %> </p>
+      <p> <%= post.content %> </p>
+    <% end %>
+  </div>
+</section>

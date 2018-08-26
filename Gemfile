@@ -58,6 +58,8 @@ group :development do
   gem 'bullet'
   # Provides a better error page for Rails and other Rack apps
   gem 'better_errors'
+  #Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema
+  gem 'annotate', '~> 2.7', '>= 2.7.1'
 
 end
 
