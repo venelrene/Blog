@@ -2,6 +2,7 @@
   "name": "Blog",
   "private": true,
   "dependencies": {
+    "@mdi/font": "^2.6.95",
     "material-design-icons": "^3.0.1"
   }
 }
