@@ -2,10 +2,10 @@
 <body>
     <!-- Begin page -->
     <div id="wrapper">
-        <!-- Top Bar Start -->
+        <!-- Top Bar mobile Start -->
         <div class="topbar-mobile">
             <div class="logo">
-                <a href="index.html.erb"><img src="logo.png" alt="" class="" style="height: 44px;"></a>
+                <%= link_to image_tag('netsvs_logo.png'), root_path, :style => "height: 44px;" %>
                 <button class="button-menu-mobile">
                     <i class="mdi mdi-menu"></i>
                 </button>
@@ -15,8 +15,9 @@
         <!-- ========== Left Sidebar Start ========== -->
         <%= render 'left_sidebar' %>
         <!-- Left Sidebar End -->
-
+        <!-- ========== Top Blog Start ========== -->
         <div class="page-wrapper">
+            <!-- Story Start -->
             <section>
                 <div class="container">
                     <div class="row">
@@ -34,19 +35,20 @@
                     </div>
                 </div>
             </section>
-
+          <!-- Top Bar mobile Start -->
             <section class="mt-5 pb-5">
                 <div class="container">
 
                     <div class="row">
-                        <!-- Content-->
+<!--                         Content-->
                         <div class="col-xl-8">
 
                             <!-- Post-->
                             <article class="post">
+                              <% @posts.each do |post| %>
 
                                 <div class="post-header">
-                                    <h2 class="post-title"><a href="#">Beautiful Day With Friends In Paris</a></h2>
+                                    <h2 class="post-title"><%= link_to post.title, post %></h2>
                                     <ul class="post-meta">
                                         <li><i class="mdi mdi-calendar"></i> July 03, 2017</li>
                                         <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">Branding</a>, <a href="#">Design</a></li>
@@ -55,15 +57,17 @@
                                 </div>
 
                                 <div class="post-preview">
-                                    <a href="#"><img src="blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
+                                    <%= link_to root_path do %>
+                                      <%= image_tag('blog/blog-1.jpg', class: "img-fluid rounded") %>
+                                    <% end %>
                                 </div>
 
                                 <div class="post-content">
-                                    <p>Whether an identity or campaign, we make your brand visible, relevant and effective by placing the digital at the center of its ecosystem, without underestimating the power of traditional media. Whether an identity or campaign, we make your brand visible.</p>
+                                    <p><%= post.content %> </p>
                                 </div>
 
                                 <div><a href="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
-
+                              <% end %>
                             </article>
                             <!-- Post end-->
 
@@ -80,7 +84,9 @@
                                 </div>
 
                                 <div class="post-preview">
-                                    <a href="#"><img src="blog/blog-2.jpg" alt="" class="img-fluid rounded"></a>
+                                    <%= link_to root_path do %>
+                                      <%= image_tag('blog/blog-2.jpg', class: "img-fluid rounded", alt: "") %>
+                                    <% end %>
                                 </div>
 
                                 <div class="post-content">
@@ -105,57 +111,9 @@
                                 </div>
 
                                 <div class="post-preview">
-                                    <a href="#"><img src="blog/blog-3.jpg" alt="" class="img-fluid rounded"></a>
-                                </div>
-
-                                <div class="post-content">
-                                    <p>Whether an identity or campaign, we make your brand visible, relevant and effective by placing the digital at the center of its ecosystem, without underestimating the power of traditional media. Whether an identity or campaign, we make your brand visible.</p>
-                                </div>
-
-                                <div><a href="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
-
-                            </article>
-                            <!-- Post end-->
-
-                            <!-- Post-->
-                            <article class="post">
-
-                                <div class="post-header">
-                                    <h2 class="post-title"><a href="#">15 Best Healthy and Easy Salad Recipes</a></h2>
-                                    <ul class="post-meta">
-                                        <li><i class="mdi mdi-calendar"></i> July 01, 2017</li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">Branding</a>, <a href="#">Design</a></li>
-                                        <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">3 Comments</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="post-preview">
-                                    <a href="#"><img src="blog/blog-4.jpg" alt="" class="img-fluid rounded"></a>
-                                </div>
-
-                                <div class="post-content">
-                                    <p>Whether an identity or campaign, we make your brand visible, relevant and effective by placing the digital at the center of its ecosystem, without underestimating the power of traditional media. Whether an identity or campaign, we make your brand visible.</p>
-                                </div>
-
-                                <div><a href="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
-
-                            </article>
-                            <!-- Post end-->
-
-                            <!-- Post-->
-                            <article class="post">
-
-                                <div class="post-header">
-                                    <h2 class="post-title"><a href="#">Easy Homemade Candy Recipes and Ideas</a></h2>
-                                    <ul class="post-meta">
-                                        <li><i class="mdi mdi-calendar"></i> Jun 18, 2017</li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">Branding</a>, <a href="#">Design</a></li>
-                                        <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">3 Comments</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="post-preview">
-                                    <a href="#"><img src="blog/blog-5.jpg" alt="" class="img-fluid rounded"></a>
+                                  <%= link_to root_path do %>
+                                    <%= image_tag('blog/blog-3.jpg', class: "img-fluid rounded", alt: "") %>
+                                  <% end %>
                                 </div>
 
                                 <div class="post-content">
@@ -182,13 +140,14 @@
                 <!-- end container -->
             </section>
         </div>
+        <!-- Top Story End-->
     </div>
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="jquery.min.js"></script>
-    <script src="popper.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="jquery.easing.min.js"></script>
-    <script src="metisMenu.min.js"></script>
+<!--    <script src="jquery.min.js"></script>-->
+<!--    <script src="popper.min.js"></script>-->
+<!--    <script src="bootstrap.min.js"></script>-->
+<!--    <script src="jquery.easing.min.js"></script>-->
+<!--    <script src="metisMenu.min.js"></script>-->
     <!--common script for all pages-->
-    <script src="jquery.app.js"></script>
+<!--    <script src="jquery.app.js"></script>-->
 </body>

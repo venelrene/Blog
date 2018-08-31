@@ -1,5 +1,5 @@
-/*  Theme Name: Blogezy - Responsive Blog Template
-    Author: Zoyothemes
+/*  Theme Name: Blog - Responsive Blog Template
+    Author: Venel
     Version: 1.0.0
     File Description:Main JS file of the template
 */

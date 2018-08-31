@@ -13,7 +13,7 @@
       <div class="widget-title">About Me</div>
 
       <div class="text-center">
-        <img src="photo.jpg" alt="About Me" class="rounded-circle">
+        <%= image_tag('photo.jpg', class: "rounded-circle", alt: "About Me") %>
 
         <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet pede, consectetur neque risus.</p>
       </div>
@@ -49,19 +49,25 @@
       <ul>
         <li class="clearfix">
           <div class="wi">
-            <a href="#"><img src="works/img1.jpg" alt="" class="img-fluid"></a>
+            <%= link_to root_path do %>
+              <%= image_tag('works/img1.jpg', class: "img-fluid", alt: "") %>
+            <% end %>
           </div>
           <div class="wb"><a href="#">Beautiful Day With Friends..</a> <span class="post-date">Jun 15, 2017</span></div>
         </li>
         <li class="clearfix">
           <div class="wi">
-            <a href="#"><img src="works/img2.jpg" alt="" class="img-fluid"></a>
+            <%= link_to root_path do %>
+              <%= image_tag('works/img2.jpg', class: "img-fluid", alt: "") %>
+            <% end %>
           </div>
           <div class="wb"><a href="#">Nature valley with cooling..</a> <span class="post-date">Jun 10, 2017</span></div>
         </li>
         <li class="clearfix">
           <div class="wi">
-            <a href="#"><img src="works/img3.jpg" alt="" class="img-fluid"></a>
+            <%= link_to root_path do %>
+              <%= image_tag('works/img3.jpg', class: "img-fluid", alt: "") %>
+            <% end %>
           </div>
           <div class="wb"><a href="#">15 Best Healthy and Easy Salad..</a> <span class="post-date">Jun 8, 2017</span></div>
         </li>

@@ -3,7 +3,7 @@
   <div class="slimscroll-menu" id="remove-scroll">
 
     <div class="logo">
-      <a href="index.html.erb"><img src="logo.png" alt="" class="" style="height: 44px;"></a>
+      <%= link_to image_tag('netsvs_logo.png'), root_path, :style => "height: 44px;" %>
       <p class="text-muted">Graduating from the halls of the University Of Western Sydney in late 2011. </p>
     </div>
 
@@ -13,40 +13,30 @@
       <ul class="metismenu" id="side-menu">
 
         <li>
-          <a href="index.html.erb"><span> Home</span></a>
+          <%= link_to root_path do %>
+            <span> Home</span>
+          <% end %>
         </li>
 
         <li>
           <a href="javascript: void(0);"><span> Features </span></a>
-          <ul class="nav-second-level" aria-expanded="false">
-            <li><a href="standard-post.html">Standard Post</a></li>
-          </ul>
         </li>
-
-        <li>
-          <a href="javascript: void(0);"><span> Lifestyle </span></a>
-        </li>
-
-        <li>
-          <a href="javascript: void(0);"><span> Travel </span></a>
-        </li>
-
         <li>
           <a href="javascript: void(0);"><span> Music </span></a>
         </li>
 
-        <!--                            <li>-->
-        <!--                                <a href="about.html">About</a>-->
-        <!--                            </li>-->
+        <li>
+            <a href="javascript: void(0);">About</a>
+        </li>
 
-        <!--                            <li>-->
-        <!--                                <a href="contact.html">Contact</a>-->
-        <!--                            </li>-->
+        <li>
+            <a href="javascript: void(0);">Contact</a>
+        </li>
 
       </ul>
 
       <div class="copyright-box">
-        <p>2017 © NetSVS. </p>
+        <p>2018 © NETSVS. </p>
       </div>
 
     </div>
@@ -54,6 +44,5 @@
     <div class="clearfix"></div>
 
   </div>
-  <!-- Sidebar -left -->
 
 </div>

@@ -15,6 +15,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+
 gem 'rails-ujs'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -40,6 +44,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'simple_form'
 
+gem 'bootstrap', '~> 4.1.3'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -53,6 +60,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # This gem is useful for live reloading our scss, js, css, and erb files
+  # run "bundle exec guard" to run it
   gem 'guard'
   # Automatically reload your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', require: false
