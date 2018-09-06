@@ -56,17 +56,31 @@
                                     </ul>
                                 </div>
 
+                                <% post.files.each do |file| %>
                                 <div class="post-preview">
-                                    <%= link_to root_path do %>
-                                      <%= image_tag('blog/blog-1.jpg', class: "img-fluid rounded") %>
+                                  <% if file.previewable? || file.variable? %>
+                                    <%= link_to(image_tag(file, class: "img-fluid rounded" ),  post_path(file, disposition: "attachment"))
+                                    %>
+                                  <% else %>
+                                    <% link_to post_path do %>
+                                      <% image_tag('blog/blog-1.jpg', class: "img-fluid rounded") %>
                                     <% end %>
+                                  <% end %>
+
                                 </div>
+                                <% end %>
 
                                 <div class="post-content">
                                     <p><%= post.content %> </p>
                                 </div>
 
-                                <div><a href="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
+                                <div>
+                                  <%= link_to root_path, class: "btn btn-outline-custom" do %>
+                                    Read More
+                                    <i class="mdi mdi-arrow-right"></i>
+                                  <% end %>
+
+                                </div>
                               <% end %>
                             </article>
                             <!-- Post end-->

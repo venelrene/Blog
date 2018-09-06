@@ -7,6 +7,14 @@
     </h3>
   </div>
 
+   <% @post.files.each do |file| %>
+   <div class="container">
+     <%= link_to file do %>
+       <%= image_tag file.variant(resize: "200x200") %>
+     <%end %>
+   </div>
+   <% end %>
+
   <div class="container">
       <%= @post.content %>
   </div>
