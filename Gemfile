@@ -18,7 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 # This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
-
 gem 'rails-ujs'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -32,7 +31,6 @@ gem 'popper_js', '~> 1.14.3'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 
